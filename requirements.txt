@@ -1,0 +1,15 @@
+numpy
+pandas
+jsons
+ta
+# torch
+pytorch-lightning
+lightning
+wandb
+langchain
+scikit-learn
+joblib
+scipy
+tqdm
+einops
+tensorboard
