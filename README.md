@@ -1,4 +1,4 @@
-# Stock_Predictor_No_News
+# Stock_Transformer
 
 Stock Predictor (No News) of The Finance Forecasting Project
 
@@ -96,7 +96,8 @@ Stock Predictor (No News) of The Finance Forecasting Project
 
 # Models Trained
 
-- **Models_Notes**: https://docs.google.com/spreadsheets/d/1MqzhONnLtlk43WdhiDtaG2MItoXea6-KWEeAKTa2cPM/edit?usp=sharing
+- Stock Prediction Models:
+    - **Models_Notes**: https://docs.google.com/spreadsheets/d/1MqzhONnLtlk43WdhiDtaG2MItoXea6-KWEeAKTa2cPM/edit?usp=sharing
 
 - **Stock Embedding Models**:
     - **ver_1**:

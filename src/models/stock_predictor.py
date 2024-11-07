@@ -305,10 +305,6 @@ class StockPredictorLightning(L.LightningModule):
         
         self.log(name="Loss/Test", value=loss, prog_bar=True)
         
-        # Loss with values renormalized
-        loss_renorm = self.criterion(self.stock_scaler.inverse_transform(predicted_stock), self.stock_scaler.inverse_transform(target_stock[:, self.stock_scaler_features_mapping]))
-        self.log(name='Loss/Test_renorm', value=loss_renorm, prog_bar=True)
-        
         
         return loss
     
