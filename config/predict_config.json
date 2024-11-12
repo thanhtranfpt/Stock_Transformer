@@ -1,0 +1,6 @@
+{
+    "checkpoint_path": "/home/tiennv/FPT/Finance_Forecast/Models_Development/Stock_Predictor_No_News/models/trained_models/stock_predictor/ver_3/lightning_logs/wandb/Stock_Predictor_No_News_Lightning/ver_3/checkpoints/epoch=19-step=54800-best-checkpoint.ckpt",
+    "future_days": 7,
+    "output_dir": "/home/tiennv/FPT/Finance_Forecast/Models_Development/Stock_Predictor_No_News/test",
+    "verbose": true
+}

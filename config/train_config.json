@@ -1,0 +1,63 @@
+{
+    "model_name": "Stock_Predictor_No_News_Lightning",
+    "version": "ver_5",
+    "training": {
+        "resume": false,
+        "checkpoint_path": null
+    },
+    "trainer": {
+        "min_epochs": 1,
+        "max_epochs": 50,
+        "max_steps": -1
+    },
+    "dataset": {
+        "stock_file": "/home/tiennv/FPT/Finance_Forecast/Models_Development/Stock_Predictor_No_News/data/processed/stock/ver_1/all.csv"
+    },
+    "dataloaders": {
+        "split_ratio": {
+            "train": 0.8,
+            "val": 0.1,
+            "test": 0.1
+        },
+        "batch_size": 256
+    },
+    "stock_predictor_lightning": {
+        "data": {},
+        "stock_embedder": {
+            "checkpoint_path": "/home/tiennv/FPT/Finance_Forecast/Models_Development/Stock_Predictor_No_News/models/trained_models/stock_embedder/ver_4/lightning_logs/wandb/Stock_Embedder_Lightning/ver_4/checkpoints/epoch=18-step=13015-best-checkpoint.ckpt",
+            "scaler_file": "/home/tiennv/FPT/Finance_Forecast/Models_Development/Stock_Predictor_No_News/models/trained_models/stock_embedder/ver_4/scaler.pkl"
+        },
+        "transformer": {
+            "pos_encoder": {
+                "d_model": 12,
+                "max_len": 5000
+            },
+            "num_encoders": 5,
+            "num_decoders": 5,
+            "encoder": {
+                "d_model": 12,
+                "attention_heads": 4,
+                "feedforward": {
+                    "d_model": 12,
+                    "d_ff": 2048,
+                    "dropout": 0.1
+                }
+            },
+            "decoder": {
+                "d_model": 12,
+                "attention_heads": 4,
+                "feedforward": {
+                    "d_model": 12,
+                    "d_ff": 2048,
+                    "dropout": 0.1
+                }
+            },
+            "final_linear": {
+                "in_features": 12,
+                "out_features": 6
+            }
+        }
+    },
+    "output_dir": "/home/tiennv/FPT/Finance_Forecast/Models_Development/Stock_Predictor_No_News/models/trained_models/stock_predictor/ver_5",
+    "verbose": true
+}
